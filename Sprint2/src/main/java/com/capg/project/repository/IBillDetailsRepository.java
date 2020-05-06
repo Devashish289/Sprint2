@@ -16,10 +16,10 @@ public interface IBillDetailsRepository extends JpaRepository<BillDetails,BigInt
 	
 	@Transactional //defines the scope of single database transaction
 	@Modifying // used to enhance the @Query annotation to execute not only SELECT queries but also INSERT, UPDATE, DELETE
-	@Query("delete from BillDetails b where b.accountNo=?1") //executes SQL query
+	@Query("delete from BillDetails b where b.billNo=?1") //executes SQL query
 	public void deleteAccountByNo(BigInteger id);
 	
-	@Query("select b from BillDetails b where b.accountNo=?1")
+	@Query("select b from BillDetails b where b.billNo=?1")
 	public List<BillDetails>getAccountDetails(BigInteger id);
 	
 }

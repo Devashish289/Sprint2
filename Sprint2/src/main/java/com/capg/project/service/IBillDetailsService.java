@@ -7,8 +7,8 @@ import com.capg.project.entity.BillDetails;
 public interface IBillDetailsService {
 	
 public boolean addBillAccount(BillDetails billDetailsObj);
-public List<BillDetails> viewBillAccount(BigInteger accountNumber);
+public List<BillDetails> viewBillAccount(BigInteger billNumber);
 public List<BillDetails> viewAllBillAccounts();
-public boolean deleteBillAccount(BigInteger accountNumber);
+public boolean deleteBillAccount(BigInteger billNumber);
 
 }

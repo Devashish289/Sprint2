@@ -10,16 +10,16 @@ import javax.persistence.Table;
 @Table(name="bill_details")
 public class BillDetails {
 @Id
-private BigInteger accountNo;
+private BigInteger billNo;
 private String holderName;
 private String connectionCode;
 private String boardName;
 
-public BigInteger getAccountNo() {
-	return accountNo;
+public BigInteger getBillNo() {
+	return billNo;
 }
-public void setAccountNo(BigInteger accountNo) {
-	this.accountNo = accountNo;
+public void setAccountNo(BigInteger billNo) {
+	this.billNo = billNo;
 }
 public String getHolderName() {
 	return holderName;
@@ -40,9 +40,9 @@ public void setBoardName(String boardName) {
 	this.boardName = boardName;
 }
 
-public BillDetails(BigInteger accountNo, String holderName, String connectionCode, String boardName) {
+public BillDetails(BigInteger billNo, String holderName, String connectionCode, String boardName) {
 	super();
-	this.accountNo = accountNo;
+	this.billNo = billNo;
 	this.holderName = holderName;
 	this.connectionCode = connectionCode;
 	this.boardName = boardName;

@@ -32,10 +32,10 @@ public boolean addBillAccount(BillDetails billDetailsObj) {
 }
 
 @Override
-public List<BillDetails> viewBillAccount(BigInteger accountNumber) {
+public List<BillDetails> viewBillAccount(BigInteger billNumber) {
 	List<BillDetails> accountDetails=new ArrayList<BillDetails>();
 	try {
-			accountDetails=billDetailsRepository.getAccountDetails(accountNumber);
+			accountDetails=billDetailsRepository.getAccountDetails(billNumber);
 		}
 	catch(Exception e) 
 		{
@@ -58,10 +58,10 @@ public List<BillDetails> viewAllBillAccounts() {
 } 
 
 @Override
-public boolean deleteBillAccount(BigInteger accountNumber) {
+public boolean deleteBillAccount(BigInteger billNumber) {
 	boolean deleteFlag=false;
 	try {
-			billDetailsRepository.deleteAccountByNo(accountNumber);
+			billDetailsRepository.deleteAccountByNo(billNumber);
 		}
 	catch(Exception e)
 		{

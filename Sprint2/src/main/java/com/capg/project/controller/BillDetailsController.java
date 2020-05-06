@@ -35,9 +35,9 @@ public void deleteAccount(@PathVariable(value = "id")  BigInteger id){
 }
 
 @GetMapping("/viewAccountById/{no}")
-public List<BillDetails> viewAccount(@PathVariable(value="no") BigInteger accountNumber) 
+public List<BillDetails> viewAccount(@PathVariable(value="no") BigInteger billNumber) 
 	{	
-		return billDetailsServiceObj.viewBillAccount(accountNumber);
+		return billDetailsServiceObj.viewBillAccount(billNumber);
 	}
 
 @RequestMapping("/list")//maps web requests
